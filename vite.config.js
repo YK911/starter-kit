@@ -28,6 +28,7 @@ export default defineConfig({
     },
   ],
   build: {
+    minify: false, // disable minification
     rollupOptions: {
       input: Object.fromEntries(
         glob
@@ -37,6 +38,10 @@ export default defineConfig({
             fileURLToPath(new URL(file, import.meta.url)),
           ])
       ),
+      // output unminified CSS file
+      output: {
+        assetFileNames: "assets/[name].[ext]",
+      },
     },
   },
 });

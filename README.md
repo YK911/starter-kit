@@ -54,6 +54,8 @@
 4. Перейдіть у браузері за адресою
    [http://localhost:5173](http://localhost:5173). Ця сторінка буде автоматично
    перезавантажуватись після збереження змін у файли проекту.
+5. Для перегляду результуючого СSS файлу виконай команду
+   `npx vite build --watch` та перейди в папку `dist/assets`
 
 ## Структура проекту. Файли і папки
 
@@ -61,6 +63,8 @@ This is the structure of the project:
 
 ```plaintext
 /
+├── demo                    # Папка для файлів цієї інструкції
+├── dist                    # Результуючий код
 ├── node_modules            # Node.js залежності для проекту
 ├── public                  # Файли для публічного доступу та використання
 ├── src                     # Вихідний код
@@ -70,7 +74,7 @@ This is the structure of the project:
 │   ├── scss                # Стилі SCSS для вашого проекту
 ├── .gitignore              # Перелік файлів та папок, які ігнорує Git
 ├── index.html              # Файл HTML для вашого проекту
-├── LICENSE                 # Файл ліцензії на ваш проект
+├── LICENSE                 # Файл ліцензії для вашого проекту
 ├── package-lock.json       # Файл з поточними версіями залежностей для вашого проекту
 ├── package.json            # Визначає метадані вашого проекту і його залежності
 ├── postcss.config.cjs      # Конфігурація для PostCSS
@@ -85,7 +89,7 @@ This is the structure of the project:
 1. Очистіть файл README.md.
 2. Адаптуйте файл LICENSE до свого проекту.
 3. Очистіть `public/sass.svg`, папки `demo/`, `src/img/**/*`, `src/fonts/**/*`, а також `src/scss/**.*`, окрім файлів `style.scss` та `_reset.scss`.
-4. Видаліть вміст із файлу `src/scss/style.scss`, окрім `@import "reset.scss";`.
+4. Видаліть вміст із файлу `src/scss/style.scss`, окрім `@use "reset.scss";`.
 5. У файлі `src/js/main.js`, залиште лише цей рядок з імпортом: `import '../scss/style.scss';`.
 
 ## Деплой
